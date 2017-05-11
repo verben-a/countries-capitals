@@ -1,0 +1,27 @@
+<div class="country-table">
+<table align="center">
+	
+	<thead>
+		<tr>
+		<th>Name</th>
+		<th>Country code</th>
+		<th>Capital</th>
+		<th>Area in KM^2</td>
+		<th>Population</th>
+		<th>Continent</th>
+		</tr>
+	</thead>
+	<tbody>
+	<tr ng-repeat="country in countries" ng-click="countryDetail(country['countryCode'])">
+		<td>{{ country["countryName"] }}</td>
+		<td>{{ country["countryCode"] }}</td>
+		<td>{{country["capital"]}}</td>
+		<td>{{country["areaInSqKm"]}}</td>
+		<td>{{country["population"]}}</td>
+		<td>{{country["continentName"]}}</td>
+	</tr>
+	</tbody>
+</table>
+	
+
+</div>

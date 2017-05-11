@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Countries and Capitals</title>
+    <!-- Responsive viewport tag, tells small screens that it's responsive -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="main.css" />
+    
+</head>
+
+<body ng-app="myApp" ng-class="{loading: isLoading}">
+    <nav>
+        <h1>Countries and Capitals</h1>
+    </nav>
+    <main>
+       <div class="row">
+       <div class="col-12"> 
+       <div class="animate-view-container">
+        <div ng-view class="animate-view">
+        </div>
+        <a ng-href="#/countries">Browse Countries</a>
+        <a ng-href="#/">Home</a>
+        
+        </div> 
+       </div>
+       </div>
+    </main>
+    <script type="text/javascript" src="./bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="./bower_components/angular-route/angular-route.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>

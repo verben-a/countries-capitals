@@ -1,0 +1,21 @@
+{
+  "name": "countries-capitals",
+  "authors": [
+    "verben-a <alina.verbenchuk@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.5.9",
+    "angular-route": "1.5.9"
+  }
+}
