@@ -16,8 +16,8 @@
 		<td>{{ country["countryName"] }}</td>
 		<td>{{ country["countryCode"] }}</td>
 		<td>{{country["capital"]}}</td>
-		<td>{{country["areaInSqKm"]}}</td>
-		<td>{{country["population"]}}</td>
+		<td>{{country["areaInSqKm"] | number:0 }}</td>
+		<td>{{country["population"] | number:0}}</td>
 		<td>{{country["continentName"]}}</td>
 	</tr>
 	</tbody>

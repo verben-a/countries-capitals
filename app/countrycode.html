@@ -5,6 +5,9 @@
 	<p>Area: {{country["areaInSqKm"]}}</p>
 	<p>Capital: {{country["capital"]}}</p>
 	<p>Population of capital: {{country["population"]}}</p>
-	<p>{{count}} neighbours: {{geonames}}</p> 
-	<!-- <p ng-repeat="geoname in geonames">{{ countryName }}</p> -->
+	<p>{{count}} neighbours: 
+	<span class="comma" ng-repeat="neighbour in neighbours"><a href="#/countries/{{neighbour ['countryCode']}}"> {{neighbour ["countryName"]}}</a></span> 
+	</p> 
+	<img id='myImage' src="http://www.geonames.org/img/country/250/{{country['countryCode'] | uppercase}}.png" />
+	<img src="http://www.geonames.org/flags/x/{{country['countryCode'] | lowercase}}.gif" />
 </div>

@@ -114,9 +114,6 @@ tr {
   border: 0.5px solid #95bcf2;
 }
 
-// .browse {
-//   background-color: #95bcf2;
-//   color: white;
-//   padding: 5px;
-//   border-radius: 2px;
-// }
+.comma:not(:empty):not(:last-child):after {
+  content: ', ';
+}

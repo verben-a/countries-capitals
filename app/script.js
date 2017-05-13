@@ -33,13 +33,15 @@ angular.module('myApp', ['ngRoute'])
 
 .controller('CountryCodeCtrl', ['$http', '$routeParams', 'NEIGHBOURS_URL', 'NEIGHBOURS_JSON', '$scope', 'countries',
     function($http, $routeParams, NEIGHBOURS_URL, NEIGHBOURS_JSON, $scope, countries) {
-        // want info now!! Don't use $q
+        
         var countryCode = $routeParams.countryCode;
         /// Call 1
         $http.get(NEIGHBOURS_URL + NEIGHBOURS_JSON + '&country=' + countryCode, { cache: true })
         .then(function(response) {
-            $scope.neighbour = response.data.geonames;
-            $scope.count = $scope.neighbour.length;
+            $scope.neighbours = response.data.geonames;
+            $scope.count = $scope.neighbours.length;
+            // $scope.name = $scope.neighbours;
+            // console.log($scope.neighbour[0].countryName); // This is an array
            
         });
 
@@ -50,9 +52,10 @@ angular.module('myApp', ['ngRoute'])
         	
         	var geonames = countriesXhr.geonames;
         	for (var i = 0; i < geonames.length; i++) {
-        		console.log(geonames[i]);
+        		// console.log(geonames[i]);
 
         		if (geonames[i].countryCode == countryCode) {
+        			console.log(geonames[i]);
 
         			$scope.country = geonames[i];
         			break
