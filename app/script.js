@@ -71,6 +71,7 @@ angular.module('myApp', ['ngRoute'])
     .constant('NEIGHBOURS_JSON', 'username=verben&type=json')
 
 .factory('apiRequest', ['$http', '$q', 'API_URL', function($http, $q, API_URL) {
+    /// returns "promise" --> special kind of test; mocking API calls
         return function(params) {
             var reqParams = angular.extend({}, params, { API_URL });
             return $http.get(API_URL, { params: reqParams })
